@@ -183,6 +183,20 @@ body {
   margin-top: 0;
 }
 
+.policy__text ul {
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+}
+
+.policy__text li + li {
+  margin-top: 4px;
+}
+
+.policy__text ul + p,
+.policy__text p + h2 {
+  margin-top: 21.6px;
+}
+
 .policy__text a {
   color: inherit;
   text-decoration: underline;
