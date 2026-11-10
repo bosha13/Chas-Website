@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Guide | Chas</title>
+    <meta name="description" content="How to manage cities, compare times, and use the Chas widget." />
+    <link rel="icon" href="src/AppIcon.webp" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page" aria-labelledby="guide-title">
+      <header class="brand" aria-label="Chas">
+        <a class="brand__home" href="index.html" aria-label="Chas home">
+          <img class="brand__icon" src="src/AppIcon.webp" alt="" width="50" height="50" />
+          <span class="brand__name">Chas</span>
+        </a>
+      </header>
+
+      <article class="guide">
+        <h1 id="guide-title" class="guide__title">User Guide</h1>
+
+        <nav class="guide__toc" aria-label="On this page">
+          <a href="#cities">Cities</a>
+          <a href="#time">Compare time</a>
+          <a href="#more-features">More features</a>
+          <a href="#shortcuts">Keyboard shortcuts</a>
+        </nav>
+
+        <div class="guide__text">
+          <section id="cities">
+            <h2>Manage cities</h2>
+            <img
+              class="guide__image guide__image--right"
+              src="src/Slide-1_2x.webp"
+              alt="Chas window with the local time in six cities"
+              width="547"
+              height="650"
+            />
+
+            <h3 id="add-city">Add</h3>
+            <p>Follow another city: ellipsis menu → <em>Add City...</em> (<kbd>⌘N</kbd>).</p>
+
+            <h3 id="rename-city">Rename</h3>
+            <p>Use names that mean something to you, like “🇨🇦 Eva” or “Work.” Right-click a city → <em>Rename City</em>. To bring its original name back, reopen <em>Rename City</em> and click <em>×</em>.</p>
+
+            <h3 id="reorder-cities">Reorder and sort</h3>
+            <p>Keep important cities at the top by dragging rows or using <kbd>⌘↑</kbd>/<kbd>⌘↓</kbd>. For time or alphabetical order: ellipsis menu → <em>Sort Cities</em>.</p>
+
+            <h3 id="remove-city">Remove</h3>
+            <p>Right-click → <em>Remove City</em>, or swipe left. Removed one by mistake? <kbd>⌘Z</kbd> brings it back.</p>
+          </section>
+
+          <section id="time">
+            <h2>Compare time</h2>
+            <p>We made comparing time quick. Click a city, type a time your way, and press <kbd>Return</kbd>. Chas shows the same moment in every city.</p>
+            <p>Your comparison stays fixed until you return to current time.</p>
+            <img
+              class="guide__image guide__image--left"
+              src="src/Slide-2_2x.webp"
+              alt="Entering a time in one city converts it for all other cities"
+              width="1062"
+              height="650"
+            />
+
+            <h3 id="time-input">Type time your way</h3>
+            <p>Start with compact input, or add a separator for precise minutes:</p>
+            <table class="guide__input-table">
+              <thead><tr><th>Input</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr><td><code>1</code></td><td>1:00</td></tr>
+                <tr><td><code>10</code></td><td>10:00</td></tr>
+                <tr><td><code>103</code></td><td>10:30</td></tr>
+                <tr><td><code>1:3</code></td><td>1:30</td></tr>
+                <tr><td><code>1:03</code></td><td>1:03</td></tr>
+                <tr><td><code>941</code></td><td>9:41</td></tr>
+              </tbody>
+            </table>
+            <p>Colons, spaces, dots, and slashes can separate hours and minutes. A single minute digit means tens of minutes, so use two digits when precision matters.</p>
+            <p>In <em>12-hour · AM/PM</em> format, enter a marker when needed: <code>930am</code>, <code>3pm</code>, or <code>3:30p</code>. Without one, Chas uses that city's current AM/PM period. <code>12am</code> is midnight; <code>12pm</code> is noon. Enter only <code>am</code> or <code>pm</code> to switch the period while keeping the displayed date.</p>
+
+            <h3 id="today-or-tomorrow">Today or tomorrow?</h3>
+            <p>Chas picks the next time that clock time comes around in the city you edit. If it has already passed today, that’s usually tomorrow:</p>
+            <table class="guide__time-table">
+              <thead><tr><th>Current city time</th><th>Input</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr><td>16:00</td><td><code>10</code></td><td>10:00 tomorrow</td></tr>
+                <tr><td>10:00 AM</td><td><code>3pm</code></td><td>3:00 PM today</td></tr>
+                <tr><td>10:00 PM</td><td><code>3am</code></td><td>3:00 AM tomorrow</td></tr>
+                <tr><td>10:00 PM</td><td><code>9</code></td><td>9:00 PM tomorrow</td></tr>
+              </tbody>
+            </table>
+
+            <h3 id="add-subtract-time">Add or subtract time</h3>
+            <p>Start with <kbd>+</kbd> to move forward or <kbd>−</kbd> to move back from the time shown.</p>
+            <table class="guide__time-table">
+              <thead><tr><th>Current city time</th><th>Input</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr><td>09:30</td><td><code>-1:30</code></td><td>08:00</td></tr>
+                <tr><td>09:30</td><td><code>+3</code></td><td>12:30</td></tr>
+              </tbody>
+            </table>
+            <p>Adjust by one hour with <kbd>⇧↑</kbd>/<kbd>⇧↓</kbd> while a city is selected.</p>
+
+            <h3 id="current-time">Return to current time</h3>
+            <p>Choose <em>Return to Current Time</em>, press <kbd>⌘R</kbd>, or click the counterclockwise-arrow button to resume all clocks.</p>
+            <p><kbd>Esc</kbd> first cancels a name edit or closes city search. Otherwise, it resets an active time comparison, or cancels the time draft if no comparison is active.</p>
+          </section>
+
+          <section id="more-features">
+            <h2>More features</h2>
+
+            <h3 id="home-city">Home city and extra information</h3>
+            <p>Your home city is the reference when you show hour or date differences beside the clocks. Without one, Chas uses the first city in your list.</p>
+            <p>To choose one, right-click a city → <em>Set as Home City</em>. Turn on extra information in <em>Settings... → Extra info</em>. <code>+2 h</code> means two hours ahead of home; <code>-2 h</code> means two hours behind.</p>
+            <p><em>Date if different</em> shows a date only when the day differs from home. While comparing another time, it uses the city whose time you last changed. Hour differences still use your home city.</p>
+
+            <h3 id="widget">Use the widget</h3>
+            <p>Keep your cities on your desktop or in Notification Center: <em>Edit Widgets → Chas Cities</em>.</p>
+            <p>The widget always shows current time, using the first cities in your list. Reorder them in Chas to choose what appears. Click the widget to open Chas.</p>
+
+            <h3 id="keep-on-top">Keep on Top</h3>
+            <p>Choose <em>Keep on Top</em> from the ellipsis menu or the macOS <em>View</em> menu to keep the Chas window above ordinary windows. Choose it again to turn the option off. There is no keyboard shortcut.</p>
+          </section>
+
+          <section id="shortcuts">
+            <h2>Keyboard shortcuts</h2>
+            <p>We’ve made Chas easy to use from the keyboard, so you can keep your hands on the keys.</p>
+            <p>These shortcuts work while Chas is active.</p>
+            <table class="guide__shortcuts">
+              <thead><tr><th>Scenario</th><th>Shortcut</th><th>Action</th></tr></thead>
+              <tbody>
+                <tr><td>Add a city</td><td><kbd>⌘N</kbd></td><td>Open city search</td></tr>
+                <tr><td>Search</td><td><kbd>↑</kbd>/<kbd>↓</kbd> or <kbd>Tab</kbd>/<kbd>⇧Tab</kbd>, <kbd>Return</kbd>, <kbd>Esc</kbd></td><td>Choose, add, or cancel a result</td></tr>
+                <tr><td>Navigate cities</td><td><kbd>↑</kbd>/<kbd>↓</kbd> or <kbd>Tab</kbd>/<kbd>⇧Tab</kbd></td><td>Move between city time fields</td></tr>
+                <tr><td>Reorder cities</td><td><kbd>⌘↑</kbd>/<kbd>⌘↓</kbd></td><td>Move the selected city</td></tr>
+                <tr><td>Edit a name</td><td><kbd>Return</kbd>, <kbd>Esc</kbd>, <kbd>Tab</kbd>/<kbd>⇧Tab</kbd></td><td>Save; cancel; save and move to another city</td></tr>
+                <tr><td>Edit time</td><td><kbd>⌘A</kbd>, <kbd>Return</kbd></td><td>Select all; apply valid input</td></tr>
+                <tr><td>Adjust time</td><td><kbd>⇧↑</kbd>/<kbd>⇧↓</kbd></td><td>Add or subtract one hour</td></tr>
+                <tr><td>Reset time</td><td><kbd>⌘R</kbd></td><td>Return to current time</td></tr>
+                <tr><td>Undo / redo</td><td><kbd>⌘Z</kbd> / <kbd>⇧⌘Z</kbd></td><td>Undo / redo removing, reordering, or sorting cities</td></tr>
+                <tr><td>Settings</td><td><kbd>⌘,</kbd></td><td>Open Settings</td></tr>
+                <tr><td>Zoom in</td><td><kbd>⌘=</kbd> or <kbd>⌘+</kbd></td><td>Make the interface larger</td></tr>
+                <tr><td>Zoom out</td><td><kbd>⌘-</kbd></td><td>Make the interface smaller</td></tr>
+                <tr><td>Default size</td><td><kbd>⌘0</kbd></td><td>Restore the default interface size</td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </article>
+
+      <footer class="links">
+        <a href="user-guide.html">User Guide</a>
+        <a href="mailto:alxndr.bokhan@gmail.com">Support</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </footer>
+    </main>
+  </body>
+</html>

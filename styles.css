@@ -146,11 +146,13 @@ body {
 .policy {
   width: min(100%, 540px);
   margin-top: 128px;
+  margin-bottom: 88px;
   padding: 0 32px;
   color: var(--text);
 }
 
-.policy__title {
+.policy__title,
+.guide__title {
   margin: 0 0 24px;
   font-size: 28px;
   font-weight: 700;
@@ -206,6 +208,133 @@ body {
   text-underline-position: from-font;
 }
 
+.guide {
+  width: min(100%, 820px);
+  margin: 64px auto 88px;
+  padding: 0 32px;
+}
+
+.guide__toc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin: 0 0 48px;
+}
+
+.guide__toc a,
+.guide__text a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+
+.guide__text {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.guide__text section + section {
+  margin-top: 42px;
+}
+
+.guide__text h2 {
+  margin: 0 0 14px;
+  font-size: 23px;
+  line-height: 1.25;
+}
+
+.guide__text h3 {
+  margin: 24px 0 8px;
+  font-size: 17px;
+}
+
+.guide__text p {
+  margin: 10px 0;
+}
+
+.guide__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 367px;
+  margin: 20px auto;
+}
+
+.guide__image--right {
+  float: right;
+  margin: 0 0 16px 24px;
+}
+
+/* Окно на картинке начинается после прозрачного поля: выравниваем его по тексту. */
+.guide__image--left {
+  margin-left: -45px;
+}
+
+.guide__text section {
+  display: flow-root;
+}
+
+.guide__text table {
+  width: 100%;
+  margin: 16px 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.guide__text th,
+.guide__text td {
+  padding: 9px 12px;
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
+  vertical-align: top;
+}
+
+.guide__text th {
+  font-weight: 700;
+}
+
+.guide__shortcuts th:first-child {
+  width: 30%;
+}
+
+.guide__text .guide__input-table {
+  width: 70%;
+}
+
+.guide__input-table th:first-child {
+  width: 50%;
+}
+
+.guide__time-table th:first-child {
+  width: 40%;
+}
+
+.guide__time-table th:nth-child(2) {
+  width: 20%;
+}
+
+.guide__text kbd {
+  padding: 2px 6px;
+  border: 0;
+  border-radius: 4px;
+  background-color: color-mix(in srgb, var(--text) 8%, var(--bg));
+  font-family: inherit;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.guide__text code {
+  font-size: 0.93em;
+}
+
+.guide__toc a:focus-visible,
+.guide__text a:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid var(--text);
+  outline-offset: 4px;
+}
+
 @media (max-width: 600px) {
   .page {
     min-height: 1024px;
@@ -220,6 +349,49 @@ body {
 
   .page--policy {
     padding-bottom: 48px;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+    padding: 0 16px;
+  }
+
+  .guide {
+    margin-top: 56px;
+    padding: 0 24px;
+  }
+
+  .guide__toc {
+    margin-bottom: 36px;
+  }
+
+  .guide__text {
+    font-size: 15px;
+  }
+
+  .guide__text table {
+    font-size: 14px;
+  }
+
+  .guide__text .guide__input-table {
+    width: 100%;
+  }
+
+  .guide__image--right,
+  .guide__image--left {
+    float: none;
+    margin: 20px auto;
+  }
+
+  .guide__text th,
+  .guide__text td {
+    padding: 8px 6px;
+  }
+
+  .guide__text section + section {
+    margin-top: 34px;
   }
 
   .policy {
