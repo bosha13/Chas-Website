@@ -4,57 +4,144 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chas – World Time</title>
-    <meta name="description" content="Chas is a compact world clock for your Mac." />
+    <meta name="description" content="A free world clock for your Mac. Type a time in one city to see it in all the others." />
+    <link rel="canonical" href="https://bosha13.github.io/Chas-Website/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bosha13.github.io/Chas-Website/" />
+    <meta property="og:title" content="Chas – World Time" />
+    <meta property="og:description" content="A free world clock for your Mac. Type a time in one city to see it in all the others." />
+    <meta property="og:image" content="https://bosha13.github.io/Chas-Website/src/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Chas windows comparing the time in six cities" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="src/AppIcon.webp" />
+    <link rel="apple-touch-icon" href="src/apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
-    <main class="page" aria-labelledby="app-title">
+    <main class="page" aria-labelledby="hero-title">
       <header class="brand" aria-label="Chas">
         <img class="brand__icon" src="src/AppIcon.webp" alt="" width="50" height="50" />
-        <h1 id="app-title" class="brand__name">Chas</h1>
+        <span class="brand__name">Chas</span>
       </header>
 
-      <section class="content" aria-label="About Chas">
-        <figure class="feature">
-          <figcaption class="copy">See the local time in any city worldwide</figcaption>
-          <img
-            class="feature__image"
-            src="src/Slide-1_2x.webp"
-            alt="Chas window with the local time in six cities"
-            width="547"
-            height="650"
-          />
-        </figure>
-
-        <figure class="feature">
-          <figcaption class="copy">Convert time across time zones instantly</figcaption>
-          <img
-            class="feature__image"
-            src="src/Slide-2_2x.webp"
-            alt="Entering a time in one city converts it for all other cities"
-            width="1062"
-            height="650"
-          />
-        </figure>
-
-        <figure class="feature">
-          <figcaption class="copy">Personalize your clocks with custom names and a home city</figcaption>
-          <img
-            class="feature__image"
-            src="src/Slide-3_2x.webp"
-            alt="Clocks with custom names like Work and Mom"
-            width="547"
-            height="650"
-          />
-        </figure>
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="hero__title">World clock for your Mac</h1>
+        <p class="hero__lead">See the local time in any city worldwide.</p>
+        <!-- TODO: add href with the App Store link after approval -->
+        <a class="store-badge">
+          <img src="src/BadgeMacAppStore.svg" alt="Download on the Mac App Store" width="156" height="40" />
+        </a>
+        <p class="hero__note">Free · macOS 14.6 or later</p>
       </section>
+
+      <div class="content">
+        <section class="feature reveal" aria-labelledby="cities-title">
+          <div class="feature__text">
+            <h2 id="cities-title" class="feature__title">All your cities in one window</h2>
+            <p>Add the cities you care about and see their local time at a glance. When a city is already on another day, Chas shows the date next to the time.</p>
+          </div>
+          <div class="stage">
+            <img
+              src="src/Slide-1_2x.webp"
+              alt="Chas window with the local time in six cities"
+              width="547"
+              height="650"
+            />
+          </div>
+        </section>
+
+        <section class="feature feature--wide reveal" aria-labelledby="convert-title">
+          <div class="feature__text">
+            <h2 id="convert-title" class="feature__title">Convert time across time zones instantly</h2>
+            <p>Click a city, type a time your way, and press Return. Chas shows the same moment in every city.</p>
+          </div>
+          <div class="stage">
+            <div class="shot-pair">
+              <img
+                src="src/Slide-2_2x.webp"
+                alt="Typing a time for San Francisco shows the same moment in every city"
+                width="547"
+                height="650"
+              />
+              <img
+                src="src/Slide-3_2x.webp"
+                alt="Typing +3 for London moves the comparison three hours ahead"
+                width="547"
+                height="650"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="feature feature--flip reveal" aria-labelledby="personalize-title">
+          <div class="feature__text">
+            <h2 id="personalize-title" class="feature__title">Personalize your clocks with custom names and a home city</h2>
+            <p>Rename cities to names that mean something to you, like “Work” or “Mom”. Your home city is the reference for hour and date differences.</p>
+          </div>
+          <div class="stage">
+            <img
+              src="src/Slide-4_2x.webp"
+              alt="Clocks with custom names like Work and Mom"
+              width="547"
+              height="650"
+            />
+          </div>
+        </section>
+
+        <section class="feature reveal" aria-labelledby="widget-title">
+          <div class="feature__text">
+            <h2 id="widget-title" class="feature__title">Keep your cities on the desktop</h2>
+            <p>Add the Chas widget to your desktop or Notification Center. It shows the current time in the first cities from your list.</p>
+          </div>
+          <div class="stage">
+            <img
+              class="stage__widget"
+              src="src/Widget_2x.webp"
+              alt="Chas widget with the time in six cities"
+              width="180"
+              height="180"
+            />
+          </div>
+        </section>
+
+        <section class="cta reveal" aria-labelledby="cta-title">
+          <img class="cta__icon" src="src/AppIcon.webp" alt="" width="64" height="64" />
+          <h2 id="cta-title" class="feature__title">Try Chas for free</h2>
+          <!-- TODO: add href with the App Store link after approval -->
+          <a class="store-badge">
+            <img src="src/BadgeMacAppStore.svg" alt="Download on the Mac App Store" width="156" height="40" />
+          </a>
+          <p class="hero__note">macOS 14.6 or later</p>
+        </section>
+      </div>
 
       <footer class="links">
         <a href="user-guide.html">User Guide</a>
-        <a href="mailto:alxndr.bokhan@gmail.com">Support</a>
         <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="mailto:alxndr.bokhan@gmail.com">Support</a>
       </footer>
     </main>
+
+    <script>
+      // Секции плавно появляются при первом попадании в экран.
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) continue;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          },
+          { rootMargin: "0px 0px -10% 0px" }
+        );
+        document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+      } else {
+        document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+      }
+    </script>
   </body>
 </html>
